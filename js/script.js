@@ -225,8 +225,13 @@ function initializeInteractions() {
             const getScrollParams = () => {
                   const card = projectsContainer.firstElementChild;
                   if (!card) return { cardWidth: 0, totalWidth: 0 };
-                  // Using getBoundingClientRect for more precision with decimals/gaps
-                  const cardWidth = card.getBoundingClientRect().width + 30;
+
+                  // Get actual gap from CSS
+                  const style = window.getComputedStyle(projectsContainer);
+                  const gap = parseInt(style.gap) || 0;
+
+                  // Calculate precise width to scroll
+                  const cardWidth = card.getBoundingClientRect().width + gap;
                   return { cardWidth, totalWidth: cardWidth * originalCards.length };
             };
 

@@ -235,18 +235,23 @@
 
 @media only screen and (max-width: 768px) {
       .project-card {
-            flex: 0 0 calc(100%);
-            /* 1 card on small tablets/mobiles */
+            flex: 0 0 100%;
+            /* Simplified to 100% */
+            margin: 0;
       }
 
       .projects-container {
             gap: 20px;
+            display: flex;
       }
 
       .carousel-nav {
-            position: static;
+            position: relative;
+            right: auto;
+            top: auto;
             justify-content: center;
             margin-top: 25px;
+            width: 100%;
       }
 
       .sub-title {
