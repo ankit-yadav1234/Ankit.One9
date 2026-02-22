@@ -75,14 +75,47 @@ nav .fas {
             display: flex;
             flex-direction: column;
             width: 100%;
-            overflow-x: hidden;
+            gap: 20px;
+      }
+
+      .contact-info-col,
+      .contact-form-col {
+            width: 100%;
       }
 
       .contact-card {
-            padding: 25px 20px;
-            /* Thinner padding for small screens */
+            padding: 20px 15px;
             width: 100%;
             box-sizing: border-box;
+            margin-bottom: 20px;
+      }
+
+      .contact-details-list li {
+            gap: 12px;
+            margin-bottom: 20px;
+      }
+
+      .icon-box {
+            width: 40px;
+            height: 40px;
+            font-size: 16px;
+      }
+
+      .text-box p {
+            font-size: 13px;
+            word-break: break-all;
+      }
+
+      .social-icons-v2 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+      }
+
+      .social-icons-v2 a {
+            width: 40px;
+            height: 40px;
+            font-size: 16px;
       }
 
       .form-row {
