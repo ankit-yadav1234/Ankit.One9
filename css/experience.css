@@ -1,0 +1,125 @@
+#experience {
+      padding: 40px 0;
+      background: transparent;
+      position: relative;
+}
+
+#experience .sub-title {
+      text-align: center;
+      margin-bottom: 50px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+}
+
+/* Experience Detail Card */
+.experience-detail-card {
+      background: rgba(10, 25, 47, 0.2);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 20px;
+      padding: 40px;
+      margin-bottom: 50px;
+      transition: all 0.3s ease;
+      width: 100%;
+}
+
+.experience-detail-card:hover {
+      transform: translateY(-8px) scale(1.03);
+      border: 1.5px solid #00ffd5;
+      box-shadow: 0 0 10px rgba(0, 255, 213, 0.15);
+}
+
+.exp-info h3 {
+      font-size: 28px;
+      color: #fff;
+      margin-bottom: 10px;
+      font-weight: 600;
+}
+
+.company-info {
+      font-size: 18px;
+      color: #00ffd5;
+      margin-bottom: 20px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+}
+
+.company-info .dot-separator {
+      margin: 0 10px;
+      color: #fff;
+      font-size: 14px;
+}
+
+.description {
+      color: #d1d1d1;
+      line-height: 1.8;
+      font-size: 16px;
+      margin-bottom: 25px;
+}
+
+.experience-skills {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+}
+
+.experience-skills strong {
+      color: #fff;
+      font-size: 16px;
+      margin-right: 5px;
+}
+
+.skill-tag {
+      color: #d1d1d1;
+      font-size: 14px;
+}
+
+.skill-tag::before {
+      content: "•";
+      margin-right: 8px;
+      color: #00ffd5;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 992px) {
+      .experience-detail-card {
+            padding: 30px 20px;
+      }
+}
+
+@media only screen and (max-width: 768px) {
+      .exp-info h3 {
+            font-size: 22px;
+      }
+
+      .company-info {
+            font-size: 16px;
+      }
+
+      #experience .sub-title {
+            font-size: 32px !important;
+      }
+}
+
+@media only screen and (max-width: 600px) {
+      .exp-info h3 {
+            font-size: 20px;
+      }
+
+      .company-info {
+            font-size: 14px;
+      }
+
+      .description {
+            font-size: 14px;
+      }
+}

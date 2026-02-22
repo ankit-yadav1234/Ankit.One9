@@ -1,0 +1,446 @@
+#education {
+      padding: 40px 0;
+      background: transparent;
+      position: relative;
+}
+
+#education .sub-title {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+}
+
+.journey-title {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 28px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-weight: 600;
+}
+
+#education .section-desc {
+      text-align: center;
+      color: #ababab;
+      max-width: 800px;
+      margin: 0 auto 50px;
+      font-size: 15px;
+      line-height: 1.6;
+}
+
+.education-detail-card {
+      background: rgba(10, 25, 47, 0.2);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 20px;
+      padding: 40px;
+      margin-bottom: 50px;
+      transition: all 0.3s ease;
+      width: 100%;
+      margin: 0 auto 50px;
+}
+
+.education-detail-card:hover {
+      transform: translateY(-8px) scale(1.03);
+      border: 1.5px solid #00ffd5;
+      box-shadow: 0 0 10px rgba(0, 255, 213, 0.15);
+}
+
+.edu-info h3 {
+      font-size: 28px;
+      color: #fff;
+      margin-bottom: 10px;
+      font-weight: 600;
+}
+
+.university {
+      font-size: 18px;
+      color: #00ffd5;
+      margin-bottom: 20px;
+      font-weight: 500;
+}
+
+.dot-separator {
+      margin: 0 10px;
+      color: #fff;
+}
+
+.description {
+      color: #d1d1d1;
+      line-height: 1.8;
+      font-size: 16px;
+      margin-bottom: 25px;
+}
+
+.education-skills {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+}
+
+.education-skills strong {
+      color: #fff;
+      font-size: 16px;
+      margin-right: 5px;
+}
+
+.skill-tag {
+      color: #d1d1d1;
+      font-size: 14px;
+}
+
+.skill-tag::before {
+      content: "•";
+      margin-right: 8px;
+      color: #00ffd5;
+}
+
+.education-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 30px;
+      align-items: stretch;
+      margin-bottom: 30px;
+}
+
+.edu-left-col,
+.edu-right-col {
+      background: rgba(10, 25, 47, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+}
+
+.edu-left-col {
+      align-self: flex-start;
+}
+
+.col-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+}
+
+.col-header i {
+      color: #ff9f43;
+      font-size: 20px;
+}
+
+.col-header h3 {
+      font-size: 18px;
+      color: #fff;
+      font-weight: 600;
+}
+
+.col-subtitle {
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 20px;
+}
+
+.edu-carousel-container {
+      width: 100%;
+      height: 280px;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      background: #111;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.edu-carousel-track {
+      display: flex;
+      height: 100%;
+      transition: transform 0.5s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+}
+
+.edu-carousel-slide {
+      min-width: 100%;
+      height: 100%;
+}
+
+.edu-carousel-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+}
+
+.edu-carousel-slide img.align-top {
+      object-position: top;
+}
+
+.edu-carousel-slide img.premium-img {
+      filter: brightness(1.05) contrast(1.1) saturate(1.1);
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+      transition: all 0.5s ease;
+}
+
+.edu-carousel-slide img.premium-img:hover {
+      filter: brightness(1.1) contrast(1.15) saturate(1.2);
+}
+
+.edu-carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(5px);
+}
+
+.edu-carousel-btn:hover {
+      background: #ff004f;
+      color: #fff;
+      box-shadow: 0 0 10px rgba(255, 0, 79, 0.4);
+}
+
+.edu-carousel-btn.prev {
+      left: 10px;
+}
+
+.edu-carousel-btn.next {
+      right: 10px;
+}
+
+.edu-carousel-dots {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+      z-index: 10;
+}
+
+.dot-indicator {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      cursor: pointer;
+      transition: all 0.3s ease;
+}
+
+.dot-indicator.active {
+      background: #ff004f;
+      transform: scale(1.2);
+}
+
+.learning-list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+}
+
+.learning-item {
+      display: flex;
+      gap: 15px;
+      background: rgba(255, 255, 255, 0.02);
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.3s ease;
+}
+
+.learning-item:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateX(15px);
+      border: 1.5px solid #00ffd5;
+}
+
+.item-icon {
+      width: 45px;
+      height: 45px;
+      background: rgba(10, 14, 26, 0.8);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+}
+
+.item-icon i {
+      font-size: 18px;
+}
+
+.item-icon.blue i {
+      color: #3498db;
+}
+
+.item-icon.green i {
+      color: #2ecc71;
+}
+
+.item-icon.purple i {
+      color: #9b59b6;
+}
+
+.item-icon.gold i {
+      color: #f1c40f;
+}
+
+.item-icon.red i {
+      color: #e74c3c;
+}
+
+.item-details h4 {
+      font-size: 14px;
+      color: #fff;
+      margin-bottom: 5px;
+}
+
+.item-details p {
+      font-size: 12px;
+      color: #ababab;
+      line-height: 1.5;
+}
+
+.achievement-banner {
+      background: linear-gradient(to right, #2c1a11, #4a2c1a, #2c1a11);
+      border: 1px solid #8e6d45;
+      border-radius: 20px;
+      padding: 40px;
+      text-align: center;
+      margin-bottom: 50px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+      transition: all 0.3s ease;
+}
+
+.achievement-banner:hover {
+      border-width: 1.5px;
+      border-color: #d4af37;
+}
+
+.badge-v2 {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(142, 109, 69, 0.2);
+      color: #d4af37;
+      padding: 8px 18px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      text-transform: uppercase;
+}
+
+.achievement-banner h3 {
+      font-size: 26px;
+      color: #fff;
+      margin-bottom: 10px;
+}
+
+.achievement-banner p {
+      font-size: 16px;
+      color: #c5b358;
+}
+
+.testimonial-section {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 30px;
+      border-radius: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.quote-text {
+      font-size: 16px;
+      color: #d1d1d1;
+      font-style: italic;
+      line-height: 1.8;
+      margin-bottom: 15px;
+}
+
+.quote-author {
+      font-size: 13px;
+      color: #ff9f43;
+      font-weight: 500;
+}
+
+/* Improved Education responsiveness */
+@media only screen and (max-width: 992px) {
+      .education-grid {
+            grid-template-columns: 1fr;
+            gap: 20px;
+      }
+
+      .edu-left-col,
+      .edu-right-col {
+            padding: 20px;
+      }
+
+      .education-detail-card {
+            padding: 30px 20px;
+      }
+}
+
+@media only screen and (max-width: 768px) {
+      .edu-info h3 {
+            font-size: 22px;
+      }
+
+      .university {
+            font-size: 16px;
+      }
+
+      .journey-title {
+            font-size: 22px;
+      }
+
+      #education .sub-title {
+            font-size: 32px !important;
+      }
+}
+
+@media only screen and (max-width: 480px) {
+      .achievement-banner {
+            padding: 25px 15px;
+      }
+
+      .edu-carousel-container {
+            height: 200px;
+      }
+
+      .learning-item {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+      }
+
+      .learning-item:hover {
+            transform: translateY(-5px);
+            /* Changed from X scroll since it's full width */
+      }
+}
