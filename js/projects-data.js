@@ -6,7 +6,7 @@ const PROJECT_DATA = {
   instagram: {
     id: "Instagram Clone App",
     title: "Instagram Clone App",
-    img: "image/Instagram_clone.png",
+    img: "image/Instagram_Clone.png",
     tags: [
       "Android Studio",
       "Kotlin",
@@ -24,7 +24,7 @@ const PROJECT_DATA = {
   repair: {
     id: "Mobile Repair Service",
     title: "Mobile Repair Service",
-    img: "Image/mobilerepaired.png",
+    img: "image/mobilerepaired.png",
     tags: [
       "Next.js",
       "Tailwind CSS",
@@ -40,7 +40,7 @@ const PROJECT_DATA = {
   blog: {
     id: "blog",
     title: "BlogDiary",
-    img: "Image/Protopage.png",
+    img: "image/Protopage.png",
     tags: [
       "React.js",
       "Node.js",
@@ -91,7 +91,7 @@ const PROJECT_DATA = {
   voiceAI: {
     id: "AI Voice Assistant Backend",
     title: "Next-Gen Voice ",
-    img: "Image/voice_AI.png",
+    img: "image/voice_AI.png",
     tags: [
       "AI",
       "Python",

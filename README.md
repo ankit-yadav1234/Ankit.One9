@@ -2,7 +2,7 @@
 
 A premium, responsive portfolio website showcasing my skills, experience, and projects. Built with a focus on modern design, smooth animations, and ultra-low latency interactions.
 
-![Portfolio Preview](Image/image.jpg)
+![Portfolio Preview](image/image.jpg)
 
 ## ✨ Features
 
