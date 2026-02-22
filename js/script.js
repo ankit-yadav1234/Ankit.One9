@@ -408,7 +408,7 @@ function initializeInteractions() {
                   if (!counter || !progressSpan) return;
 
                   const target = +counter.getAttribute("data-target");
-                  const duration = 2000;
+                  const duration = 1000;
                   const increment = target / (duration / 16);
                   let current = 0;
 
@@ -429,7 +429,7 @@ function initializeInteractions() {
             // Generic counters (stats)
             document.querySelectorAll(".stat-box .counter").forEach(counter => {
                   const target = +counter.getAttribute("data-target");
-                  const duration = 2000;
+                  const duration = 1000;
                   const increment = target / (duration / 16);
                   let current = 0;
                   const update = () => {
@@ -451,8 +451,23 @@ function initializeInteractions() {
 
       const statsContainer = document.querySelector(".stats-container");
       const skillBars = document.querySelector(".skill-bars");
-      if (statsContainer) statsObserver.observe(statsContainer);
       if (skillBars) statsObserver.observe(skillBars);
+
+      // Smooth scroll for all links (extra insurance)
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                  const targetId = this.getAttribute('href');
+                  if (targetId === "#") return;
+                  e.preventDefault();
+                  const target = document.querySelector(targetId);
+                  if (target) {
+                        target.scrollIntoView({
+                              behavior: 'smooth',
+                              block: 'start'
+                        });
+                  }
+            });
+      });
 }
 
 // Start everything

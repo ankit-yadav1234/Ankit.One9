@@ -7,14 +7,18 @@ nav .fas {
 @media only screen and (max-width: 775px) {
       nav .fas {
             display: block;
-            font-size: 25px;
+            font-size: 28px;
             cursor: pointer;
             color: #fff;
+            position: relative;
+            z-index: 1005;
+            /* Ensures it stays visible */
+            margin-right: 10px;
       }
 
       nav ul {
-            background: rgba(10, 14, 26, 0.98);
-            backdrop-filter: blur(15px);
+            background: rgba(5, 10, 20, 0.98);
+            backdrop-filter: blur(20px);
             position: fixed;
             top: 0;
             right: -250px;
@@ -22,11 +26,12 @@ nav .fas {
             height: 100vh;
             padding-top: 80px;
             z-index: 2000;
-            transition: right 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            border-left: 1px solid rgba(255, 255, 255, 0.1);
+            border-left: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
       }
 
       nav ul.menu-open {
@@ -55,14 +60,35 @@ nav .fas {
 /* Further refinements for small mobiles */
 @media only screen and (max-width: 600px) {
       .sub-title {
-            font-size: 32px;
+            font-size: 30px;
             text-align: center;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
       }
 
       .about-container {
-            padding: 0 10px;
+            padding: 0 5%;
             text-align: center;
+      }
+
+      /* Fix Contact Section Overflow */
+      .contact-grid {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            overflow-x: hidden;
+      }
+
+      .contact-card {
+            padding: 25px 20px;
+            /* Thinner padding for small screens */
+            width: 100%;
+            box-sizing: border-box;
+      }
+
+      .form-row {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
       }
 }
 

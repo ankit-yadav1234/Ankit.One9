@@ -7,11 +7,13 @@
 
 html {
       scroll-behavior: smooth;
+      overflow-x: hidden;
 }
 
 body {
       background: transparent;
       color: #ffffff;
+      overflow-x: hidden;
 }
 
 #header {
@@ -19,13 +21,19 @@ body {
 }
 
 .container {
-      padding: 5px 5%;
+      padding: 10px 10%;
+}
+
+@media only screen and (max-width: 992px) {
+      .container {
+            padding: 10px 5%;
+      }
 }
 
 @media only screen and (max-width: 600px) {
       .container {
-            padding: 5px 3%;
-            /* Reduced padding on small mobiles */
+            padding: 10px 6%;
+            /* Consistent margin for all sections */
       }
 }
 
