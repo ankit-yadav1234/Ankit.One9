@@ -392,7 +392,8 @@
 /* Improved Education responsiveness */
 @media only screen and (max-width: 992px) {
       .education-grid {
-            grid-template-columns: 1fr;
+            display: flex;
+            flex-direction: column-reverse;
             gap: 20px;
       }
 
