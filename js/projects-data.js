@@ -52,6 +52,23 @@ const PROJECT_DATA = {
       "Developed a full-stack blogging platform enabling users to create, edit, and manage personal blogs with rich text formatting and media integration.",
     desc: "Developed a full-stack blogging platform enabling users to create, edit, and manage personal blogs with rich text formatting and media integration. Implemented user authentication, profile management, and a responsive UI using React.js and Tailwind CSS. Leveraged Appwrite for backend services including database management, file storage, and user authentication.",
     code: "https://github.com/ankit-yadav1234/BlogDiary",
+    live: "#",
+  },
+  protopage: {
+    id: "protopage",
+    title: "Protopage Landing Page",
+    img: "image/Protopage.png",
+    tags: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Landing Page",
+      "UI Design",
+    ],
+    shortDesc:
+      "A professionally designed landing page for Protopage, focusing on modern aesthetics, clean typography, and a conversion-oriented layout.",
+    desc: "Developed a high-conversion landing page for Protopage. The project emphasizes visual hierarchy, responsive design, and smooth user interactions. Built with a focus on performance and cross-browser compatibility to ensure a premium user experience across all devices.",
+    code: "https://github.com/ankit-yadav1234/protopage-landing-page",
     live: "https://protopage-landing-page.vercel.app",
   },
   instagram: {
