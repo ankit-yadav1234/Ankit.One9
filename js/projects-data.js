@@ -52,7 +52,7 @@ const PROJECT_DATA = {
       "Developed a full-stack blogging platform enabling users to create, edit, and manage personal blogs with rich text formatting and media integration.",
     desc: "Developed a full-stack blogging platform enabling users to create, edit, and manage personal blogs with rich text formatting and media integration. Implemented user authentication, profile management, and a responsive UI using React.js and Tailwind CSS. Leveraged Appwrite for backend services including database management, file storage, and user authentication.",
     code: "https://github.com/ankit-yadav1234/BlogDiary",
-    live: "#",
+    live: "https://blog-diary-flame.vercel.app",
   },
   protopage: {
     id: "protopage",
