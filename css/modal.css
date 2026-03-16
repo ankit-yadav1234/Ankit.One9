@@ -146,17 +146,20 @@
 .modal-btn {
       flex: 1;
       padding: 14px 0;
-      border-radius: 10px;
+      border-radius: 12px;
       text-align: center;
       text-decoration: none;
       font-weight: 600;
-      transition: all 0.3s ease;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
-      border: 1.5px solid #fff;
+      border: 1.5px solid rgba(255, 255, 255, 0.2);
       color: #fff;
+      position: relative;
+      z-index: 100;
+      cursor: pointer;
 }
 
 .modal-btn.outline:hover {

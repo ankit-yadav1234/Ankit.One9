@@ -9,20 +9,20 @@ function renderProjects() {
       const projectsHtml = Object.entries(PROJECT_DATA).map(([key, project]) => {
             const descClass = project.tags.length > 4 ? "desc-3-lines" : "desc-4-lines";
             return `
-    <div class="project-card">
+    <div class="project-card" onclick="openProjectModal('${key}')" style="cursor: pointer">
       <div class="project-img">
         <img src="${project.img}" alt="${project.title}" />
       </div>
       <div class="project-info">
         <div class="project-title-row">
           <h3>${project.title}</h3>
-          <span class="live-badge" onclick="openProjectModal('${key}')">LIVE <span class="live-dot">🔴</span></span>
+          <span class="live-badge">LIVE <span class="live-dot">🔴</span></span>
         </div>
         <div class="project-tags">
           ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
         </div>
         <p class="${descClass}">${project.shortDesc}</p>
-        <button class="show-more-btn" onclick="openProjectModal('${key}')">
+        <button class="show-more-btn">
           Show More
         </button>
       </div>
@@ -123,8 +123,29 @@ window.openProjectModal = function (projectId) {
             tagsContainer.appendChild(span);
       });
 
-      document.getElementById("modal-code-link").href = data.code;
-      document.getElementById("modal-live-link").href = data.live;
+      const codeBtn = document.getElementById("modal-code-link");
+      const liveBtn = document.getElementById("modal-live-link");
+      
+      codeBtn.onclick = (e) => { 
+            e.preventDefault();
+            e.stopPropagation();
+            if (data.code && data.code !== "#") window.open(data.code, '_blank');
+      };
+      
+      if (data.live === "#" || !data.live) {
+            liveBtn.style.display = "none";
+      } else {
+            liveBtn.style.display = "inline-flex";
+            liveBtn.onclick = (e) => { 
+                  e.preventDefault();
+                  e.stopPropagation();
+                  window.open(data.live, '_blank');
+            };
+      }
+      
+      const modalContent = document.querySelector(".modal-content");
+      if (modalContent) modalContent.scrollTop = 0;
+
       if (modal) {
             modal.style.display = "block";
             document.body.style.overflow = "hidden";
@@ -459,17 +480,20 @@ function initializeInteractions() {
       if (skillBars) statsObserver.observe(skillBars);
 
       // Smooth scroll for all links (extra insurance)
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      // Smooth scroll for Navigation and Hero links only
+      const scrollLinks = document.querySelectorAll('.sidemenu a, .hero-btn, .footer-logo, .footer-section a');
+      scrollLinks.forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                  const targetId = this.getAttribute('href');
-                  if (targetId === "#") return;
-                  e.preventDefault();
-                  const target = document.querySelector(targetId);
-                  if (target) {
-                        target.scrollIntoView({
-                              behavior: 'smooth',
-                              block: 'start'
-                        });
+                  const href = this.getAttribute('href');
+                  if (href && href.startsWith('#') && href !== "#") {
+                        const target = document.querySelector(href);
+                        if (target) {
+                              e.preventDefault();
+                              target.scrollIntoView({
+                                    behavior: 'smooth',
+                                    block: 'start'
+                              });
+                        }
                   }
             });
       });
