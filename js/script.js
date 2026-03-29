@@ -199,8 +199,8 @@ function initializeInteractions() {
       }
 
       // Contact Form Submission
-      const scriptURL = "https://script.google.com/macros/s/AKfycbw28vvDrsSf8VR6bNrK5QRe16S3I6a5oL5elHANmkqNXry3VPyS-U-OktJllZTyBJkA/exec";
-      const form = document.forms["submit-to-google-sheet"];
+      const scriptURL = "https://script.google.com/macros/s/AKfycbywwcLz-6Z8P7gR8P6qvCXKnQeFPvOgKU0PCU0G0h5VScAQy4FLcOyok3bahppldmBK/exec";
+      const form = document.querySelector('form[name="submit-to-google-sheet"]');
       const msg = document.getElementById("msg");
 
       if (form) {
@@ -213,6 +213,7 @@ function initializeInteractions() {
 
                   fetch(scriptURL, { method: "POST", body: new FormData(form) })
                         .then((response) => {
+                              console.log("Response:", response);
                               msg.innerHTML = "Message sent successfully!";
                               setTimeout(() => (msg.innerHTML = ""), 5000);
                               form.reset();
